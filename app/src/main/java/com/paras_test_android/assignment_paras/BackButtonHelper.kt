@@ -7,8 +7,7 @@ import android.widget.Button
 import android.widget.Toast
 
 /**
- * Helper class to set up back button in activities to navigate back to main menu
- and avoid code duplication
+ * Clase auxiliar para configurar el botón de retroceso en las actividades para volver al menú principal y evitar la duplicación de código.
  */
 object BackButtonHelper {
     fun setupBackButton(activity: Activity, buttonId: Int, destinationActivity: Class<out Activity>) {

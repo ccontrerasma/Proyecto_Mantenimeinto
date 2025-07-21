@@ -16,15 +16,14 @@ import androidx.appcompat.app.AlertDialog
 
 
 /**
- * Class that edits expenses activity when using the main menu on upper left corner of the app
- * or on the main screen of the app.
+ * Class Permite editar la actividad de gastos desde el menú principal en la esquina superior izquierda de la aplicación o en la pantalla principal.
  */
 class EditExpensesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEditExpensesBinding
     private lateinit var expensesAdapter: EditExpensesAdapter
 
     /**
-     * Function that creates the activity and sets up the adapter for the recycler view.
+     * Function que crea la actividad y configura el adaptador para la vista del reciclador.
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,7 +57,7 @@ class EditExpensesActivity : AppCompatActivity() {
     }
 
     /**
-     * Function that loads expenses from the database and updates the adapter.
+     * Function que carga gastos de la base de datos y actualiza el adaptador.
      */
     private fun loadExpenses() {
         CoroutineScope(Dispatchers.IO).launch {
@@ -81,7 +80,7 @@ class EditExpensesActivity : AppCompatActivity() {
     }
 
     /**
-     * Function that handles the back button press and goes back to the main activity.
+     * Function que maneja la pulsación del botón Atrás y regresa a la actividad principal.
      *
      */
     override fun onBackPressed() {
@@ -92,8 +91,8 @@ class EditExpensesActivity : AppCompatActivity() {
     }
 
     /**
-     * Function to save expenses to Room database. separates empty and non-empty expenses
-     * and deletes the empty ones and updates the non-empty ones.
+     * Function Para guardar gastos en la base de datos de la habitación. Separa los gastos vacíos de los que no están vacíos.
+     * Elimina los gastos vacíos y actualiza los que no están vacíos.
      */
     private fun saveExpenses() {
         CoroutineScope(Dispatchers.IO).launch {
@@ -143,7 +142,7 @@ class EditExpensesActivity : AppCompatActivity() {
 
 
     /**
-     * Function that shows a confirmation dialog before deleting all expenses in editexpenses activity.
+     * Function que muestra un cuadro de diálogo de confirmación antes de eliminar todos los gastos en la actividad de edición de gastos.
      *
      */
     private fun showDeleteAllConfirmationDialog() {
@@ -159,7 +158,7 @@ class EditExpensesActivity : AppCompatActivity() {
 
 
     /**
-     * Function that deletes all expenses from the Room database with delete all button.
+     * Function que elimina todos los gastos de la base de datos de la habitación con el botón eliminar todo.
      */
     private fun deleteAllExpenses() {
         CoroutineScope(Dispatchers.IO).launch {

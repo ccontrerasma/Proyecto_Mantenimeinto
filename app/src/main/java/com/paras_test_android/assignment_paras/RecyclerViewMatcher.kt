@@ -10,8 +10,8 @@ import org.hamcrest.Matcher
 
 
 /**
- * RecyclerViewMatcher  helper class to help with matching views inside RecyclerView
- * for the instrumented tests
+ * Clase auxiliar RecyclerViewMatcher para facilitar la coincidencia de vistas dentro de RecyclerView
+ * * para las pruebas instrumentadas
 
  */
 class RecyclerViewMatcher(private val recyclerViewId: Int) {

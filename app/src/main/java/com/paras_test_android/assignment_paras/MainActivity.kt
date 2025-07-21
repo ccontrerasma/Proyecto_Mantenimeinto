@@ -10,8 +10,8 @@ import com.google.android.material.navigation.NavigationView
 import com.paras_test_android.assignment_paras.databinding.ActivityMainBinding
 
 /**
- * Class for the  Main Activity of the application
- * holds the main menu buttons and the navigation drawer
+ * Clase para la actividad principal de la aplicación
+ * Contiene los botones del menú principal y el panel de navegación.
  * */
 class MainActivity : AppCompatActivity() {
     // View Binding
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
 
     /**
-     * OnCreate method overriding that starts sub activities on button click
+     * OnCreate method que inicia subactividades al hacer clic en el botón
      * */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Method that  will open the navigation drawer on click of the menu button
+     * Metodo que abrirá el cajón de navegación al hacer clic en el botón de menú
      * */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return if (item.itemId == android.R.id.home) {

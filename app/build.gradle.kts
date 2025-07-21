@@ -6,13 +6,13 @@ plugins {
 
 android {
     namespace = "com.paras_test_android.assignment_paras"
-    compileSdk = 34
+    compileSdk = 36
 
 
     defaultConfig {
         applicationId = "com.paras_test_android.assignment_paras"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.androidx.espresso.contrib)
     implementation(libs.androidx.rules)
     implementation(libs.androidx.uiautomator)
+    implementation(libs.androidx.recyclerview)
     testImplementation(libs.junit)
     testImplementation ("org.jetbrains.kotlin:kotlin-test-junit")
     androidTestImplementation(libs.androidx.junit)

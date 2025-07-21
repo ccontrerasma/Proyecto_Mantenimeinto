@@ -9,7 +9,7 @@ import com.paras_test_android.assignment_paras.databinding.ShowExpensesActivityB
 import kotlinx.coroutines.*
 
 /**
- * Class that Shows expenses activity
+ * Clase que muestra la actividad de gastos
  */
 class ShowExpensesActivity : AppCompatActivity() {
     //binding
@@ -17,7 +17,7 @@ class ShowExpensesActivity : AppCompatActivity() {
     private lateinit var expensesAdapter: ExpensesAdapter
 
     /**
-     * OnCreate method overriding for show statistics activity
+     * OnCreate metodo para la actividad de mostrar estadísticas
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -23,32 +23,26 @@
         android:inputType="numberDecimal"
         android:layout_marginBottom="16dp"/>
 
-    <EditText
-        android:id="@+id/dateInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Fecha (dd/MM/yyyy)"
-        android:layout_marginBottom="16dp"/>
+ <Spinner
+     android:id="@+id/categorySpinner"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginBottom="50dp"/>
 
-    <EditText
-        android:id="@+id/categoryInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Categoria"
-        android:layout_marginBottom="16dp"/>
 
-    <Button
-        android:id="@+id/submitExpenseButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Agregar"
-        android:layout_marginBottom="16dp"/>
+ <Button
+     android:id="@+id/submitExpenseButton"
+     android:layout_width="376dp"
+     android:layout_height="66dp"
+     android:layout_marginBottom="16dp"
+     android:layout_weight="0"
+     android:text="Agregar" />
 
-    <Button
-        android:id="@+id/backButtonAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Regresar al Menu Principal"/>
+ <Button
+     android:id="@+id/backButtonAdd"
+     android:layout_width="374dp"
+     android:layout_height="68dp"
+     android:text="Regresar al Menu Principal" />
 
 </LinearLayout>
 

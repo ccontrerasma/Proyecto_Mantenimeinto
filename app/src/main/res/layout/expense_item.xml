@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp">
+    android:padding="8dp"
+    android:layout_marginTop="50dp">
+    <TableRow>
+    <TextView
+        android:id="@+id/Asunto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Asunto"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:padding="8dp" />
+        <TextView
+            android:id="@+id/Categoria"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Categoría"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/Monto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Monto"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:gravity="end"
+        android:padding="8dp" />
+
+    </TableRow>
 
     <!-- Helper layout for expense item - title of expense and amount of expense will be displayed in a row-->
+
     <TableRow>
+
         <TextView
             android:id="@+id/titleTextView"
             android:layout_width="0dp"
@@ -16,6 +57,16 @@
             android:padding="8dp" />
 
         <TextView
+            android:id="@+id/categoryTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:padding="8dp"
+            android:gravity="center"/>
+
+        <TextView
             android:id="@+id/amountTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -24,5 +75,7 @@
             android:textColor="#000"
             android:gravity="end"
             android:padding="8dp" />
+
     </TableRow>
 </TableLayout>
+

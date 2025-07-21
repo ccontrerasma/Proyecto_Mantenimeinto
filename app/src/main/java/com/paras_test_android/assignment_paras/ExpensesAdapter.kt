@@ -7,18 +7,19 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 /**
- * Adapter class for the expenses recycler view
+ * Clase adapter para la vista del reciclador de gastos
  */
 class ExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerView.Adapter<ExpensesAdapter.ExpenseViewHolder>() {
 
     class ExpenseViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleTextView: TextView = view.findViewById(R.id.titleTextView)
+        val categoryTextView: TextView = view.findViewById(R.id.categoryTextView)
         val amountTextView: TextView = view.findViewById(R.id.amountTextView)
 
     }
 
     /**
-     * Function that creates the view holder on creation
+     * Función que crea el contenedor de la vista al crearse
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExpenseViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.expense_item, parent, false)
@@ -26,11 +27,12 @@ class ExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerView.A
     }
 
     /**
-     * Function binding the view holder to the data
+     * Función que vincula el contenedor de la vista a los datos
      */
     override fun onBindViewHolder(holder: ExpenseViewHolder, position: Int) {
         val expense = expenses[position]
         holder.titleTextView.text = expense.title
+        holder.categoryTextView.text = expense.category.toString()
         holder.amountTextView.text = expense.amount.toString()
 
     }
@@ -38,7 +40,7 @@ class ExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerView.A
     override fun getItemCount() = expenses.size
 
     /**
-     * Function updating the expenses list
+     * Función de actualización de la lista de gastos
      */
     fun updateExpenses(newExpenses: List<ExpenseTable>) {
         expenses = newExpenses

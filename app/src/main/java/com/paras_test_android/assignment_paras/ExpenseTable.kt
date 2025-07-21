@@ -2,8 +2,8 @@ package com.paras_test_android.assignment_paras
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 /**
- * Data class for Expense Table
- * holds the data for the expenses
+ * Clase de datos para la tabla de gastos
+ * contiene los datos de los gastos.
  */
 @Entity(tableName = "expenses")
 data class ExpenseTable(

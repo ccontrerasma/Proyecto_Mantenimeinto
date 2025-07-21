@@ -9,13 +9,13 @@ import android.widget.EditText
 import androidx.recyclerview.widget.RecyclerView
 
 /***
- * Adapter class for editing expenses this targets the  edit expense screen
+ * Adapter class Para editar gastos, esto apunta a la pantalla de edición de gastos.
  */
 class EditExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerView.Adapter<EditExpensesAdapter.ExpenseViewHolder>() {
 
     /***
      *
-     * Method to create new views
+     * Metodo para crear nuevas vistas
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExpenseViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_edit_expense, parent, false)
@@ -25,7 +25,7 @@ class EditExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerVi
 
     /***
      *
-     * Function updating the contents of the itemView  to represent the item.
+     * Function actualizando el contenido de itemView para representar el elemento.
      */
     override fun onBindViewHolder(holder: ExpenseViewHolder, position: Int) {
         val expense = expenses[position]
@@ -34,7 +34,7 @@ class EditExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerVi
 
     /***
      *
-     * Function returning the size of the list of expenses
+     * Función que devuelve el tamaño de la lista de gastos
      */
     override fun getItemCount(): Int {
         return expenses.size
@@ -42,7 +42,7 @@ class EditExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerVi
 
     /***
      *
-     * Method  to update the list of expenses
+     * Metodo para actualizar la lista de gastos
      */
     fun updateExpenses(newExpenses: List<ExpenseTable>) {
         expenses = newExpenses
@@ -51,7 +51,7 @@ class EditExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerVi
 
     /***
      *
-     * Function to get all the expenses from db
+     * Función para obtener todos los gastos de la base de datos
      */
     fun getAllExpenses(): List<ExpenseTable> {
         return expenses
@@ -59,8 +59,8 @@ class EditExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerVi
 
     /***
      *
-     * ExpenseViewHolder class that keeps the edit text fields for the title, amount, date and category
-     * and binds the data to the edit text fields
+     * ExpenseViewHolder class Que conserva los campos de texto de edición para el título, el importe, la fecha y la categoría.
+     *  Y vincula los datos a dichos campos.
      */
     class ExpenseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //private variables for the edit text fields
@@ -71,7 +71,7 @@ class EditExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerVi
 
         /***
          *
-         * Function that binds the data to the edit text fields
+         * Función que vincula los datos a los campos de texto de edición
          */
         fun bind(expense: ExpenseTable) {
             titleEditText.setText(expense.title)
@@ -81,7 +81,7 @@ class EditExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerVi
 
             /***
              *
-             * Text listeners for the edit text fields to update the expense object correctly
+             * Text listeners para los campos de texto de edición para actualizar correctamente el objeto de gasto
              */
             titleEditText.addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
