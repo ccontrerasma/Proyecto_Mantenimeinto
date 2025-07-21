@@ -9,7 +9,7 @@
         android:id="@+id/titleEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Expense Title"
+        android:hint="Asunto"
         android:textSize="16sp"
         android:padding="8dp" />
 
@@ -17,7 +17,7 @@
         android:id="@+id/amountEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Amount"
+        android:hint="Monto"
         android:textSize="16sp"
         android:inputType="numberDecimal"
         android:padding="8dp" />
@@ -26,7 +26,7 @@
         android:id="@+id/dateEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Date"
+        android:hint="Fecha"
         android:textSize="16sp"
         android:padding="8dp" />
 
@@ -34,7 +34,7 @@
         android:id="@+id/categoryEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Category"
+        android:hint="Categoria"
         android:textSize="16sp"
         android:padding="8dp" />
 </LinearLayout>

@@ -13,7 +13,7 @@
         android:id="@+id/mostFrequentTitleLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Most Frequent Title"
+        android:text="Asunto mas frecuente:"
         android:textSize="16sp"
         android:textStyle="bold"
         android:padding="8dp" />
@@ -29,7 +29,7 @@
         android:id="@+id/mostFrequentCategoryLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Most Frequent Category"
+        android:text="Categoria mas Frecuente:"
         android:textSize="16sp"
         android:textStyle="bold"
         android:padding="8dp" />
@@ -45,7 +45,7 @@
         android:id="@+id/averageAmountPerCategoryLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Average Amount Per Category"
+        android:text="Monto por Categoria:"
         android:textSize="16sp"
         android:textStyle="bold"
         android:padding="8dp" />
@@ -61,7 +61,7 @@
         android:id="@+id/mostRecentExpenseLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Most Recent Expense"
+        android:text="Ultimo gasto registrado:"
         android:textSize="16sp"
         android:textStyle="bold"
         android:padding="8dp" />
@@ -77,14 +77,14 @@
         android:id="@+id/showStatisticsButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Show Statistics"
+        android:text="Mostrar Estadisticas"
         android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/backButtonShow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back to Main Menu"
+        android:text="Volver al Menu"
         android:layout_marginTop="16dp" />
 
 </LinearLayout>

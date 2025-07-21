@@ -3,21 +3,21 @@
     <item
         android:id="@+id/nav_add_expenses"
         android:icon="@drawable/ic_add"
-        android:title="Add Expenses" />
+        android:title="Agregar Gastos" />
     <item
         android:id="@+id/nav_show_expenses"
         android:icon="@drawable/ic_show"
-        android:title="Show Expenses" />
+        android:title="Mostrar Gastos" />
     <item
         android:id="@+id/nav_edit_expenses"
         android:icon="@drawable/ic_edit"
-        android:title="Edit Expenses" />
+        android:title="Editar Gastos" />
     <item
         android:id="@+id/nav_show_statistics"
         android:icon="@drawable/ic_statistics"
-        android:title="Show Statistics" />
+        android:title="Mostrar Estatisticas" />
     <item
         android:id="@+id/nav_exit"
         android:icon="@drawable/ic_exit"
-        android:title="Exit" />
+        android:title="Cerrar App" />
 </menu>
