@@ -18,3 +18,8 @@ data class ExpenseCategoryFrequency(val category: String, val count: Int)
  * Data class holding average amount of expenses per category
  */
 data class CategoryAverageAmount(val category: String, val averageAmount: Double)
+
+data class CategoryTotalAmount(
+    val category: String,
+    val totalAmount: Double
+)

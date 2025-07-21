@@ -41,21 +41,21 @@ class ShowStatisticsActivity : AppCompatActivity() {
                 //get all the statistics for the four different categories from DAO
                 val mostFrequentTitle = expenseDao.getMostFrequentTitle()
                 val mostFrequentCategory = expenseDao.getMostFrequentCategory()
-                val averageAmounts = expenseDao.getAverageAmountPerCategory()
+                val totalAmounts = expenseDao.getTotalAmountPerCategory()
                 val mostRecentExpense = expenseDao.getMostRecentExpense()
 
                 Log.d("ShowStatisticsActivity", "Most Frequent Title: $mostFrequentTitle")
                 Log.d("ShowStatisticsActivity", "Most Frequent Category: $mostFrequentCategory")
-                Log.d("ShowStatisticsActivity", "Average Amounts: $averageAmounts")
+                Log.d("ShowStatisticsActivity", "Average Amounts: $totalAmounts")
                 Log.d("ShowStatisticsActivity", "Most Recent Expense: $mostRecentExpense")
 
                 withContext(Dispatchers.Main) {
                     binding.mostFrequentTitleValue.text = "${mostFrequentTitle.title} (${mostFrequentTitle.count} veces)"
                     binding.mostFrequentCategoryValue.text = "${mostFrequentCategory.category} (${mostFrequentCategory.count} veces)"
                     //binding.averageAmountPerCategoryValue.text = averageAmounts.joinToString("\n") { "${it.category}: ${it.averageAmount}" }
-                    binding.averageAmountPerCategoryValue.text = averageAmounts.joinToString("\n") { "${it.category}: \t S/.${it.averageAmount.roundToTwoDecimalPlaces()}" }
+                    binding.averageAmountPerCategoryValue.text = totalAmounts.joinToString("\n") { "${it.category}: \t\t S/.${it.totalAmount.roundToTwoDecimalPlaces()}" }
                     //binding.mostRecentExpenseValue.text = "${mostRecentExpense.title} (${mostRecentExpense.amount} on ${mostRecentExpense.date})"
-                    binding.mostRecentExpenseValue.text = "${mostRecentExpense.title} (S/. ${mostRecentExpense.amount.roundToTwoDecimalPlaces()} -- ${mostRecentExpense.date})"
+                    binding.mostRecentExpenseValue.text = "${mostRecentExpense.title} (S/. ${mostRecentExpense.amount.roundToTwoDecimalPlaces()} Realizado el : ${mostRecentExpense.date})"
                     Toast.makeText(this@ShowStatisticsActivity, getString(R.string.toast_statistics_updated), Toast.LENGTH_SHORT).show()
                 }
             } catch (e: Exception) {

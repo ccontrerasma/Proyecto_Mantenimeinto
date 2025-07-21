@@ -25,6 +25,7 @@ interface ExpenseDAO {
     @Query("SELECT * FROM expenses")
     suspend fun getAllExpenses(): List<ExpenseTable>
 
+
     /**
      * inserts expenses in the db using list of expenses
      */
@@ -49,6 +50,9 @@ interface ExpenseDAO {
     @Query("DELETE FROM expenses")
     suspend fun deleteAllExpenses()
 
+    @Query("SELECT DISTINCT category FROM expenses")
+    suspend fun getAllCategories(): List<String>
+
     /**
      * select statement for getting the most frequent title in show statistics
      */
@@ -64,8 +68,8 @@ interface ExpenseDAO {
     /**
      * select statement for creating tghe average amount per category of expenses in statistics
      */
-    @Query("SELECT category, AVG(amount) as averageAmount FROM expenses GROUP BY category")
-    suspend fun getAverageAmountPerCategory(): List<CategoryAverageAmount>
+    @Query("SELECT category, SUM(amount) AS totalAmount FROM expenses GROUP BY category")
+    suspend fun getTotalAmountPerCategory(): List<CategoryTotalAmount>
     /**
      * select statement to show the most recent expense by date in the show statistics menu
      */

@@ -3,6 +3,7 @@ package com.paras_test_android.assignment_paras
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
  * Clase adapter para la vista del reciclador de gastos
  */
 class ExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerView.Adapter<ExpensesAdapter.ExpenseViewHolder>() {
+
+    private var allExpenses: List<ExpenseTable> = expenses.toList()
 
     class ExpenseViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleTextView: TextView = view.findViewById(R.id.titleTextView)
@@ -43,7 +46,17 @@ class ExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerView.A
      * Función de actualización de la lista de gastos
      */
     fun updateExpenses(newExpenses: List<ExpenseTable>) {
+        allExpenses = newExpenses
         expenses = newExpenses
+        notifyDataSetChanged()
+    }
+
+    fun filterByCategory(category: String) {
+        expenses = if (category == "Todas") {
+            allExpenses
+        } else {
+            allExpenses.filter { it.category == category }
+        }
         notifyDataSetChanged()
     }
 }
