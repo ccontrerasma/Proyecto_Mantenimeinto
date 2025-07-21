@@ -50,12 +50,12 @@ class ShowStatisticsActivity : AppCompatActivity() {
                 Log.d("ShowStatisticsActivity", "Most Recent Expense: $mostRecentExpense")
 
                 withContext(Dispatchers.Main) {
-                    binding.mostFrequentTitleValue.text = "${mostFrequentTitle.title} (${mostFrequentTitle.count} times)"
-                    binding.mostFrequentCategoryValue.text = "${mostFrequentCategory.category} (${mostFrequentCategory.count} times)"
+                    binding.mostFrequentTitleValue.text = "${mostFrequentTitle.title} (${mostFrequentTitle.count} veces)"
+                    binding.mostFrequentCategoryValue.text = "${mostFrequentCategory.category} (${mostFrequentCategory.count} veces)"
                     //binding.averageAmountPerCategoryValue.text = averageAmounts.joinToString("\n") { "${it.category}: ${it.averageAmount}" }
-                    binding.averageAmountPerCategoryValue.text = averageAmounts.joinToString("\n") { "${it.category}: ${it.averageAmount.roundToTwoDecimalPlaces()}" }
+                    binding.averageAmountPerCategoryValue.text = averageAmounts.joinToString("\n") { "${it.category}: \t S/.${it.averageAmount.roundToTwoDecimalPlaces()}" }
                     //binding.mostRecentExpenseValue.text = "${mostRecentExpense.title} (${mostRecentExpense.amount} on ${mostRecentExpense.date})"
-                    binding.mostRecentExpenseValue.text = "${mostRecentExpense.title} (${mostRecentExpense.amount.roundToTwoDecimalPlaces()} on ${mostRecentExpense.date})"
+                    binding.mostRecentExpenseValue.text = "${mostRecentExpense.title} (S/. ${mostRecentExpense.amount.roundToTwoDecimalPlaces()} -- ${mostRecentExpense.date})"
                     Toast.makeText(this@ShowStatisticsActivity, getString(R.string.toast_statistics_updated), Toast.LENGTH_SHORT).show()
                 }
             } catch (e: Exception) {

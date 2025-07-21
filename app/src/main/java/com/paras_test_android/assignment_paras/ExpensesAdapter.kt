@@ -33,7 +33,7 @@ class ExpensesAdapter(private var expenses: List<ExpenseTable>) : RecyclerView.A
         val expense = expenses[position]
         holder.titleTextView.text = expense.title
         holder.categoryTextView.text = expense.category.toString()
-        holder.amountTextView.text = expense.amount.toString()
+        holder.amountTextView.text = "S/. ${expense.amount}"
 
     }
 
