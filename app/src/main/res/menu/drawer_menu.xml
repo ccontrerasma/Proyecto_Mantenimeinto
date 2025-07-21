@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    this is the menu on top left hand corner of the app-->
+    <item
+        android:id="@+id/nav_add_expenses"
+        android:icon="@drawable/ic_add"
+        android:title="Add Expenses" />
+    <item
+        android:id="@+id/nav_show_expenses"
+        android:icon="@drawable/ic_show"
+        android:title="Show Expenses" />
+    <item
+        android:id="@+id/nav_edit_expenses"
+        android:icon="@drawable/ic_edit"
+        android:title="Edit Expenses" />
+    <item
+        android:id="@+id/nav_show_statistics"
+        android:icon="@drawable/ic_statistics"
+        android:title="Show Statistics" />
+    <item
+        android:id="@+id/nav_exit"
+        android:icon="@drawable/ic_exit"
+        android:title="Exit" />
+</menu>

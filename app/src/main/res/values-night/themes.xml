@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for dark mode -->
+    <style name="Base.Theme.Assignment_paras" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <!-- Text appearance for menu items in dark theme -->
+    <style name="TextAppearance.MenuItem.Dark" parent="TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textColor">@color/menuText</item>
+    </style>
+
+    <!-- Base application theme -->
+    <style name="Theme.Assignment_paras" parent="Base.Theme.Assignment_paras" />
+</resources>

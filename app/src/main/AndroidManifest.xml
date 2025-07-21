@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:enableOnBackInvokedCallback="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/android_image_app"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/android_image_app_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Assignment_paras"
+        tools:targetApi="31">
+        <!-- Main activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Other activities -->
+        <activity
+            android:name=".AddExpensesActivity"
+            android:label="Add Expense">
+        </activity>
+        <activity
+            android:name=".ShowExpensesActivity"
+            android:label="Show all Expenses">
+        </activity>
+        <activity
+            android:name=".EditExpensesActivity"
+            android:label="Edit Expenses">
+        </activity>
+        <activity
+            android:name=".ShowStatisticsActivity"
+            android:label="Show Statistics on Expenses">
+        </activity>
+    </application>
+</manifest>

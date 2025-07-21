@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Helper layout for expense item - title of expense and amount of expense will be displayed in a row-->
+    <TableRow>
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/amountTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:gravity="end"
+            android:padding="8dp" />
+    </TableRow>
+</TableLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <!--App name.-->
+    <string name="app_name">FinanzApp</string>
+    <!--Toast messages-->
+    <string name="toast_back_to_main">I am going back to Main Menu!</string>
+    <string name="toast_statistics_updated">Statistics Updated!</string>
+    <string name="toast_statistics_failed">Failed to load statistics. Please make sure you have added expenses.</string>
+    <string name="toast_statistics_deleted">All Expenses Deleted.</string>
+
+</resources>

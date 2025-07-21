@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ShowStatisticsActivity">
+    <!-- Show statistics activity layout with all necessary buttons-->
+
+    <TextView
+        android:id="@+id/mostFrequentTitleLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Most Frequent Title"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/mostFrequentTitleValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/mostFrequentCategoryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Most Frequent Category"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/mostFrequentCategoryValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/averageAmountPerCategoryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Average Amount Per Category"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/averageAmountPerCategoryValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/mostRecentExpenseLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Most Recent Expense"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/mostRecentExpenseValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/showStatisticsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Statistics"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/backButtonShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to Main Menu"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
